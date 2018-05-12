@@ -1,0 +1,28 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="offset-md-3 col-md-6">
+
+      <h1 class="form-signin-heading">Вхід</h1>
+      <p class="lead">Хм... не маєте аккаунту?</p><p><a routerLink="/register">Реєструйтесь тут!</a></p>
+      <div class="alert alert-danger" *ngIf="!(valid)" role="alert">
+        Ви вказали невірний логін або пароль! Спробуйте ще :)
+      </div>
+
+      <form (submit)="login()">
+        <div class="form-group">
+          <label for="name">Логін</label>
+          <input type="text" class="form-control" name="name" placeholder="Enter login" [(ngModel)]="credentials.name">
+        </div>
+        <div class="form-group">
+          <label for="password">Пароль</label>
+          <input type="password" class="form-control" name="password" placeholder="Password" [(ngModel)]="credentials.password">
+        </div>
+
+        <button type="submit" class="btn btn-primary wide">Увійти</button>
+      </form>
+    </div>
+  </div>
+
+</div>

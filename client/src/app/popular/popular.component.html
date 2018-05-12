@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Популярні товари</h1>
+
+  <p *ngIf="empty">На жаль, ми не можемо Вам нічого запропонувати.</p>
+
+  <div class="row">
+    <app-item-card
+      *ngFor="let item of items"
+      [item]="item">
+    </app-item-card>
+  </div>
+
+</div>

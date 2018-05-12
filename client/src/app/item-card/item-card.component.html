@@ -1,0 +1,16 @@
+
+<div class="col-md-4 card-wrapper">
+      <div class="card">
+        <a [routerLink]="['/item', item.id]">
+        <img class="card-img-top" [attr.src]="item.image" alt="{{item.title}}">
+        </a>
+      <button type="button" class="btn btn-danger btn-circle" *ngIf="auth.isLoggedIn() && item.favourite == false" (click)="saveData()"><i class="fa fa-heart"></i></button>
+      <button type="button" class="btn bg-secondary btn-circle" *ngIf="auth.isLoggedIn() && item.favourite == true" (click)="deleteData()"><i class="fa fa-check"></i></button>
+
+        <div class="card-body">
+        <a [routerLink]="['/item', item.id]">
+        <h6 class="card-title">{{item.title}}</h6>
+        </a>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,27 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="offset-md-3 col-md-6">
+
+      <h1 class="form-signin-heading">Реєстрація</h1>
+      <p class="lead">Створіть аккаунт та обирайте лише цікаву літературу!</p><p><a routerLink="/login">Вже маєте власний профіль?</a></p>
+<form (submit)="register()" #ngForm="ngForm">
+  <div class="form-group">
+    <label for="name">Логін</label>
+    <input type="text" class="form-control" name="name" placeholder="Логін" [(ngModel)]="credentials.name" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" name="email" placeholder="Email" [(ngModel)]="credentials.email" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Пароль</label>
+    <input type="password" class="form-control" name="password" placeholder="Пароль" [(ngModel)]="credentials.password" required>
+  </div>
+  <button type="submit" class="btn btn-default" [disabled]="!ngForm.valid">Створити аккаунт!</button>
+</form>
+
+    </div>
+  </div>
+</div>

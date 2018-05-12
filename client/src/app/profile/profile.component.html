@@ -1,0 +1,15 @@
+<div class="container">
+<h1>Рекомендації</h1>
+
+<p *ngIf="empty">На жаль, ми не можемо Вам нічого запропонувати. Проте, Ви можете переглянути популярні товари!</p>
+
+<div class="row">
+  <app-item-card
+    *ngFor="let item of items"
+    [item]="item">
+  </app-item-card>
+</div>
+
+
+  <app-popular></app-popular>
+</div>
